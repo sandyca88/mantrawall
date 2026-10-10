@@ -59,13 +59,14 @@ html:not(.member) .m{display:none!important}
 
 /* nav */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.nav .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.nav .wrap{display:flex;align-items:center;gap:16px;min-height:68px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
 .seal{width:40px;height:40px;border-radius:50%;background:var(--btn);color:var(--btn-fg);display:grid;place-items:center;font-family:var(--f-display);font-size:18px;flex:none}
-.brand b{display:block;font-family:var(--f-display);font-weight:500;font-size:17px;line-height:1.2;white-space:nowrap}
+.brand > span:last-child{min-width:0}
+.brand b{display:block;font-family:var(--f-display);font-weight:500;font-size:17px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand small{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--text-soft);white-space:nowrap}
-.navlinks{display:none;gap:4px}
-.navlinks a{font-size:13.5px;text-decoration:none;padding:7px 14px;border-radius:var(--r-pill);color:var(--text-soft)}
+.navlinks{display:none;gap:4px;flex:none}
+.navlinks a{font-size:13.5px;text-decoration:none;padding:7px 12px;border-radius:var(--r-pill);color:var(--text-soft);white-space:nowrap}
 .navlinks a:hover{background:var(--surface-2);color:var(--text)}
 .navlinks a.on{background:var(--btn);color:var(--btn-fg)}
 .nav .spacer{flex:1}
@@ -73,15 +74,17 @@ html:not(.member) .m{display:none!important}
 .searchbox input{border:0;background:transparent;outline:0;min-width:0;width:100%;padding:9px 0;font-size:13.5px;color:var(--text)}
 .searchbox input::placeholder{color:var(--text-mute)}
 .searchbox:focus-within{border-color:var(--blue)}
-.nav .searchbox{display:none;width:220px}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;color:var(--text-soft);flex:none}
+.icon-btn:hover{background:var(--surface-2);color:var(--text)}
+.nav .btn-dark,.nav .btn-line{flex:none}
 .btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--btn);color:var(--btn-fg);border-radius:var(--r-pill);padding:10px 18px;font-size:13.5px;font-weight:500;white-space:nowrap;transition:opacity .2s,transform .2s}
 .btn-dark:hover{opacity:.9}
 .btn-dark:active{transform:scale(.98)}
 .btn-line{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:var(--r-pill);padding:9px 16px;font-size:13.5px;white-space:nowrap}
 .btn-line:hover{background:var(--surface-2)}
-@media (min-width:768px){.navlinks{display:flex}}
-@media (min-width:1024px){.nav .searchbox{display:flex}}
-@media (max-width:420px){.brand small{display:none}.nav .btn-dark .lbl{display:none}.nav .btn-dark{padding:10px 12px}}
+@media (min-width:1080px){.navlinks{display:flex}}
+@media (max-width:560px){.brand .b2{display:none}}
+@media (max-width:420px){.brand small{display:none}.nav .btn-dark .lbl,.nav .btn-line .lbl{display:none}.nav .btn-dark,.nav .btn-line{padding:10px 12px}}
 
 /* hero */
 .hero{position:relative;overflow:hidden}
@@ -270,7 +273,7 @@ dialog.login::backdrop{background:rgba(20,26,32,.55);backdrop-filter:blur(4px)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mantra Lounge 首頁">
       <span class="seal">雲</span>
-      <span><b>Mantra Lounge <span class="latin" style="font-style:italic">|</span> Lofi Dharma</b><small>福慧下載 · MEMBER VAULT</small></span>
+      <span><b>Mantra Lounge<span class="b2"> <span class="latin" style="font-style:italic">|</span> Lofi Dharma</span></b><small>福慧下載 · MEMBER VAULT</small></span>
     </a>
     <nav class="navlinks" aria-label="快速篩選">
       <a href="#covers" data-nav="全部" class="on">全部封面</a>
@@ -280,7 +283,7 @@ dialog.login::backdrop{background:rgba(20,26,32,.55);backdrop-filter:blur(4px)}
       <a href="#how">下載說明</a>
     </nav>
     <span class="spacer"></span>
-    <label class="searchbox"><svg class="i"><use href="#i-search"/></svg><input id="q1" type="search" placeholder="搜尋咒語、封面…" autocomplete="off"></label>
+    <button class="icon-btn" id="navSearch" aria-label="搜尋封面" title="搜尋封面"><svg class="i"><use href="#i-search"/></svg></button>
     <button class="btn-dark g" data-login><svg class="i"><use href="#i-crown"/></svg><span class="lbl">會員登入</span></button>
     <button class="btn-line m" id="logout" title="登出後需要重新輸入密碼"><svg class="i" style="color:var(--ok)"><use href="#i-unlock"/></svg><span class="lbl">已解鎖 · 登出</span></button>
   </div>
@@ -670,9 +673,11 @@ document.addEventListener("click", e => {
   else if (t.dataset.cat) { cat = t.dataset.cat; renderGrid(); }
   else if (t.dataset.nav) { cat = t.dataset.nav; renderGrid(); }
 });
-["#q1", "#q2"].forEach(sel => $(sel).addEventListener("input", e => {
-  q = e.target.value; $("#q1").value = q; $("#q2").value = q; renderGrid();
-}));
+$("#q2").addEventListener("input", e => { q = e.target.value; renderGrid(); });
+$("#navSearch").addEventListener("click", () => {
+  $(".hero-actions").scrollIntoView({ behavior:"smooth", block:"center" });
+  setTimeout(() => $("#q2").focus({ preventScroll:true }), 350);
+});
 $("#q2").addEventListener("keydown", e => { if (e.key === "Enter") $("#covers").scrollIntoView({ behavior:"smooth" }); });
 
 $("#nCovers").textContent = ITEMS.length;
