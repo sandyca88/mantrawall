@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mantra Lounge 福慧下載</title>
+<meta name="description" content="Mantra Lounge 會員專屬原圖下載：24 張佛系 Lofi 封面，輸入會員密碼即可下載高清原檔。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Serif+TC:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: like_style member portal — sticky glass nav, split hero with featured cover, chip filters, 3-col rounded cover cards, info band, quiet footer. */
+:root{
+  --bg:#f8f5f0; --bg-soft:#f2eee8; --surface:#fffcf7; --surface-2:#efebe4;
+  --text:#2c3e50; --text-soft:#5f6e7e; --text-mute:#9aa8b8;
+  --blue:#8fa8c8; --blue-soft:#d9e4f0; --gold:#c9a86a; --gold-soft:#f1e6cc; --gold-ink:#8c6a3a;
+  --border:#e8e0d3; --btn:#2c3e50; --btn-fg:#fffcf7; --ok:#5d9479; --err:#b25a4c;
+  --glass:rgba(248,245,240,.82); --pill:rgba(255,252,247,.9);
+  --shadow:0 20px 50px -24px rgba(44,62,80,.2); --shadow-sm:0 8px 24px -12px rgba(44,62,80,.16);
+  --f-display:"Noto Serif TC","Songti TC","Songti SC",Georgia,serif;
+  --f-latin:"Instrument Serif","Noto Serif TC",Georgia,serif;
+  --f-body:"Plus Jakarta Sans","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  --r-card:28px; --r-pill:999px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1c1e20; --bg-soft:#232629; --surface:#2a2e32; --surface-2:#33383d;
+  --text:#e8e6df; --text-soft:#a9b2bb; --text-mute:#76828e;
+  --blue:#9db4d2; --blue-soft:#2b3542; --gold:#d4b67c; --gold-soft:#3a3325; --gold-ink:#dcc08a;
+  --border:#3a3e43; --btn:#e8e6df; --btn-fg:#1c1e20; --ok:#7fb89a; --err:#e08a7c;
+  --glass:rgba(28,30,32,.82); --pill:rgba(42,46,50,.9);
+  --shadow:0 20px 50px -24px rgba(0,0,0,.6); --shadow-sm:0 8px 24px -12px rgba(0,0,0,.5);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#1c1e20; --bg-soft:#232629; --surface:#2a2e32; --surface-2:#33383d;
+  --text:#e8e6df; --text-soft:#a9b2bb; --text-mute:#76828e;
+  --blue:#9db4d2; --blue-soft:#2b3542; --gold:#d4b67c; --gold-soft:#3a3325; --gold-ink:#dcc08a;
+  --border:#3a3e43; --btn:#e8e6df; --btn-fg:#1c1e20; --ok:#7fb89a; --err:#e08a7c;
+  --glass:rgba(28,30,32,.82); --pill:rgba(42,46,50,.9);
+  --shadow:0 20px 50px -24px rgba(0,0,0,.6); --shadow-sm:0 8px 24px -12px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:100;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='a'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='4' stitchTiles='stitch' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E")}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:12px}
+svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:max(16px,4vw)}
+@media (min-width:1024px){.wrap{padding-inline:32px}}
+.serif{font-family:var(--f-display)}
+.latin{font-family:var(--f-latin)}
+.member .g{display:none!important}
+html:not(.member) .m{display:none!important}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.seal{width:40px;height:40px;border-radius:50%;background:var(--btn);color:var(--btn-fg);display:grid;place-items:center;font-family:var(--f-display);font-size:18px;flex:none}
+.brand b{display:block;font-family:var(--f-display);font-weight:500;font-size:17px;line-height:1.2;white-space:nowrap}
+.brand small{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--text-soft);white-space:nowrap}
+.navlinks{display:none;gap:4px}
+.navlinks a{font-size:13.5px;text-decoration:none;padding:7px 14px;border-radius:var(--r-pill);color:var(--text-soft)}
+.navlinks a:hover{background:var(--surface-2);color:var(--text)}
+.navlinks a.on{background:var(--btn);color:var(--btn-fg)}
+.nav .spacer{flex:1}
+.searchbox{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:var(--r-pill);padding:0 14px;color:var(--text-soft)}
+.searchbox input{border:0;background:transparent;outline:0;min-width:0;width:100%;padding:9px 0;font-size:13.5px;color:var(--text)}
+.searchbox input::placeholder{color:var(--text-mute)}
+.searchbox:focus-within{border-color:var(--blue)}
+.nav .searchbox{display:none;width:220px}
+.btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--btn);color:var(--btn-fg);border-radius:var(--r-pill);padding:10px 18px;font-size:13.5px;font-weight:500;white-space:nowrap;transition:opacity .2s,transform .2s}
+.btn-dark:hover{opacity:.9}
+.btn-dark:active{transform:scale(.98)}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:var(--r-pill);padding:9px 16px;font-size:13.5px;white-space:nowrap}
+.btn-line:hover{background:var(--surface-2)}
+@media (min-width:768px){.navlinks{display:flex}}
+@media (min-width:1024px){.nav .searchbox{display:flex}}
+@media (max-width:420px){.brand small{display:none}.nav .btn-dark .lbl{display:none}.nav .btn-dark{padding:10px 12px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.mist{position:absolute;inset:0;pointer-events:none;z-index:0}
+.mist i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75}
+.mist i:nth-child(1){width:520px;height:520px;left:-120px;top:-160px;background:var(--blue-soft);animation:drift 26s ease-in-out infinite}
+.mist i:nth-child(2){width:460px;height:460px;right:-140px;top:60px;background:var(--gold-soft);animation:drift 32s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.08)}}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:40px;padding-block:56px 40px}
+@media (min-width:1024px){.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:56px;padding-block:88px 56px}}
+.eyebrow{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;border:1px solid var(--border);background:var(--pill);border-radius:var(--r-pill);padding:5px 6px 5px 14px;font-size:11px;letter-spacing:.12em;color:var(--text-soft)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.tag-gold{display:inline-flex;align-items:center;gap:5px;background:var(--gold-soft);color:var(--gold-ink);border-radius:var(--r-pill);padding:3px 10px;font-size:10.5px;letter-spacing:.12em}
+h1{font-family:var(--f-display);font-weight:500;font-size:clamp(44px,8.4vw,72px);line-height:1.12;letter-spacing:.02em;margin:22px 0 18px;text-wrap:balance}
+h1 .mark{color:var(--gold)}
+.lead{font-size:16px;color:var(--text);margin:0 0 6px;max-width:34em}
+.lead-sm{font-size:13.5px;color:var(--text-soft);margin:0;max-width:38em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-actions .searchbox{flex:1 1 260px;padding:0 18px;background:var(--surface);box-shadow:var(--shadow-sm)}
+.hero-actions .searchbox input{padding:14px 0;font-size:14.5px}
+.hero-actions .btn-dark{padding:14px 24px;font-size:14.5px}
+@media (max-width:640px){.hero-actions .btn-dark{flex:1 1 100%}}
+.moons{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:12.5px;color:var(--text-soft);flex-wrap:wrap}
+.moons span.c{display:flex}
+.moons span.c i{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;font-style:normal;font-size:11px;color:var(--gold-ink);margin-left:-6px}
+.moons span.c i:first-child{margin-left:0}
+.moons a{color:var(--gold-ink);text-underline-offset:3px}
+
+.feature{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-card);padding:12px;box-shadow:var(--shadow)}
+.feature .ph{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;max-width:100%;background:var(--surface-2);display:block;width:100%}
+.feature .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.feature .ph:hover img{transform:scale(1.03)}
+.feature .fbody{padding:16px 10px 6px}
+.feature h2{font-family:var(--f-display);font-weight:500;font-size:19px;margin:0;line-height:1.35;text-wrap:balance}
+.feature .en{margin:4px 0 0}
+.feature .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+
+/* pills on images */
+.pill{position:absolute;display:inline-flex;align-items:center;gap:6px;background:var(--pill);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--text);border-radius:var(--r-pill);padding:4px 10px;font-size:11px;line-height:1.3;white-space:nowrap}
+.pill.tl{top:10px;left:10px}
+.pill.tr{top:10px;right:10px;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.pill.bl{bottom:10px;left:10px}
+.pill.gold{background:var(--gold);color:#2c2416}
+.pill .d{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.member .pill .d{background:var(--ok)}
+.tl2{top:40px!important}
+
+/* filters */
+.filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-block:4px 24px}
+.chip{border:1px solid var(--border);background:var(--surface);color:var(--text-soft);border-radius:var(--r-pill);padding:6px 14px;font-size:13px;transition:background .2s,color .2s}
+.chip:hover{background:var(--surface-2);color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--btn);border-color:var(--btn);color:var(--btn-fg)}
+.chip .n{font-size:11px;opacity:.6;margin-left:4px;font-variant-numeric:tabular-nums}
+.count{font-size:12px;color:var(--text-soft);margin-left:6px;font-variant-numeric:tabular-nums}
+
+/* grid + cards */
+.grid{display:grid;gap:24px;grid-template-columns:1fr;padding-bottom:56px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s;min-width:0}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:var(--surface-2);padding:0}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.card:hover .thumb img.fg{transform:scale(1.03)}
+.thumb.tall img.bg{position:absolute;inset:0;filter:blur(18px) saturate(1.1);transform:scale(1.2);opacity:.85}
+.thumb.tall img.fg{position:relative;object-fit:contain}
+.cbody{padding:18px 18px 16px;display:flex;flex-direction:column;flex:1;min-width:0}
+.cbody h3{font-family:var(--f-display);font-weight:500;font-size:17.5px;line-height:1.4;margin:0;text-wrap:balance}
+.cbody .sub{font-size:13px;color:var(--text-soft);margin:3px 0 0}
+.en{font-size:10.5px;letter-spacing:.1em;color:var(--text-soft);margin:6px 0 0;text-transform:uppercase}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0}
+.tags span{font-size:11.5px;color:var(--text-soft);background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--r-pill);padding:2px 10px}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:16px}
+.btn-dl,.btn-pv{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:var(--r-pill);padding:9px 10px;font-size:13px;white-space:nowrap;transition:background .2s,opacity .2s}
+.btn-dl{background:var(--surface-2);color:var(--text-soft);border:1px solid var(--border)}
+.btn-dl:hover{color:var(--text)}
+.member .btn-dl{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
+.member .btn-dl:hover{opacity:.9}
+.btn-pv{border:1px solid var(--border);color:var(--text);background:transparent}
+.btn-pv:hover{background:var(--bg-soft)}
+.btn-dl[aria-busy="true"]{opacity:.7;pointer-events:none}
+.meta{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-soft);margin:12px 0 0;font-variant-numeric:tabular-nums}
+.meta svg{width:13px;height:13px;color:var(--gold)}
+.empty{grid-column:1/-1;text-align:center;padding:48px 16px;color:var(--text-soft);border:1px dashed var(--border);border-radius:var(--r-card)}
+
+/* info band */
+.info{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-card);padding:24px;display:grid;gap:24px;margin-bottom:64px}
+@media (min-width:1024px){.info{grid-template-columns:1fr 290px;padding:32px;gap:32px}}
+.info .kick{font-size:11px;letter-spacing:.14em;color:var(--text-soft);display:flex;align-items:center;gap:6px}
+.info h2{font-family:var(--f-display);font-weight:500;font-size:clamp(20px,3vw,24px);margin:6px 0 18px;text-wrap:balance}
+.tiles{display:grid;gap:14px}
+@media (min-width:768px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tile{background:var(--bg-soft);border:1px solid var(--border);border-radius:20px;padding:18px;min-width:0}
+.tile .ic{width:32px;height:32px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:grid;place-items:center;color:var(--gold-ink)}
+.tile h4{margin:14px 0 6px;font-size:14px;font-weight:600}
+.tile p{margin:0;font-size:12.5px;color:var(--text-soft);line-height:1.65}
+.side{background:var(--bg-soft);border:1px solid var(--border);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.side h4{margin:0;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.side h4 svg{color:var(--gold)}
+.side p{margin:0;font-size:12.5px;color:var(--text-soft);line-height:1.7}
+.side hr{border:0;border-top:1px solid var(--border);margin:4px 0;width:100%}
+.side .btn-dark{width:100%;margin-top:auto;padding:12px}
+
+footer{border-top:1px solid var(--border)}
+footer .wrap{display:grid;gap:24px;padding-block:36px 44px}
+@media (min-width:768px){footer .wrap{grid-template-columns:1fr auto;align-items:start}}
+footer .fb{font-family:var(--f-display);font-size:18px}
+footer p{margin:8px 0 0;font-size:13px;color:var(--text-soft);max-width:26em}
+footer .links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+footer .links a{font-size:12.5px;text-decoration:none;border:1px solid var(--border);background:var(--surface);border-radius:var(--r-pill);padding:5px 14px}
+footer .fine{font-size:11.5px;color:var(--text-soft);line-height:1.9}
+@media (min-width:768px){footer .fine{text-align:right}}
+
+/* login dialog */
+dialog.login{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:var(--r-card);padding:0;width:min(420px,calc(100vw - 32px));box-shadow:var(--shadow)}
+dialog.login::backdrop{background:rgba(20,26,32,.55);backdrop-filter:blur(4px)}
+.login form{padding:28px 26px 24px;display:flex;flex-direction:column;gap:14px}
+.login .top{display:flex;justify-content:space-between;align-items:flex-start}
+.login .seal{width:46px;height:46px;font-size:21px}
+.login .x{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--text-soft)}
+.login .x:hover{background:var(--surface-2)}
+.login h2{font-family:var(--f-display);font-weight:500;font-size:24px;margin:4px 0 0}
+.login .hint{margin:0;font-size:13.5px;color:var(--text-soft)}
+.field{display:flex;align-items:center;border:1px solid var(--border);background:var(--bg);border-radius:16px;padding:0 6px 0 16px}
+.field:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.field input{flex:1;min-width:0;border:0;outline:0;background:transparent;padding:14px 0;font-size:16px;letter-spacing:.04em}
+.field button{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:var(--text-soft)}
+.field.bad{border-color:var(--err);animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.err{min-height:1.4em;margin:-4px 0 0;font-size:12.5px;color:var(--err)}
+.remember{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-soft)}
+.remember input{accent-color:var(--btn);width:16px;height:16px}
+.login .btn-dark{padding:14px;font-size:15px}
+.login .join{text-align:center;font-size:12.5px;color:var(--text-soft);margin:2px 0 0}
+.login .join a{color:var(--gold-ink)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(14,18,22,.9);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 56px) 16px calc(env(safe-area-inset-bottom,0px) + 16px)}
+.lb[hidden]{display:none!important}
+.lb .stage{max-width:min(1100px,100%);min-height:0;display:flex;align-items:center;justify-content:center;width:100%}
+.lb .frame{position:relative;display:inline-flex;max-width:100%}
+.lb .frame img{max-width:100%;max-height:calc(100vh - 240px);max-height:calc(100dvh - 240px);object-fit:contain;border-radius:14px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);background:#222}
+.lb .veil{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:rgba(255,252,247,.94);color:#2c3e50;border-radius:var(--r-pill);padding:6px 6px 6px 16px;font-size:12.5px;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);max-width:calc(100% - 24px)}
+.lb .veil span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lb .veil button{background:#2c3e50;color:#fffcf7;border-radius:var(--r-pill);padding:7px 14px;font-size:12.5px;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}
+.lb .cap{color:#e8e6df;text-align:center;margin-top:16px;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:100%}
+.lb .cap b{font-family:var(--f-display);font-weight:500;font-size:18px}
+.lb .cap small{color:#a9b2bb;font-size:12px;font-variant-numeric:tabular-nums}
+.lb .cap .save-hint{color:#d9bd85;font-size:12px}
+.lb .lbdl{background:#fffcf7;color:#2c3e50;border-radius:var(--r-pill);padding:9px 18px;font-size:13px;display:inline-flex;gap:8px;align-items:center}
+.lb .ctl{position:absolute;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fffcf7;background:rgba(255,255,255,.1)}
+.lb .ctl:hover{background:rgba(255,255,255,.2)}
+.lb .close{top:calc(env(safe-area-inset-top,0px) + 10px);right:14px}
+.lb .prev{left:14px;top:50%}
+.lb .next{right:14px;top:50%}
+@media (max-width:640px){.lb .prev,.lb .next{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 14px)}}
+
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translate(-50%,20px);opacity:0;z-index:80;background:var(--btn);color:var(--btn-fg);border-radius:var(--r-pill);padding:11px 20px;font-size:13.5px;box-shadow:var(--shadow);transition:opacity .25s,transform .25s;pointer-events:none;max-width:calc(100vw - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite;flex:none}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 8"/></symbol>
+  <symbol id="i-frames" viewBox="0 0 24 24"><rect x="2.5" y="7" width="12" height="9" rx="1.5"/><rect x="16.5" y="4" width="5" height="16" rx="1.2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zip" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M11 3v2m0 2v2m0 2v2"/><rect x="9.5" y="14" width="3" height="4" rx="1"/></symbol>
+  <symbol id="i-show" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mantra Lounge 首頁">
+      <span class="seal">雲</span>
+      <span><b>Mantra Lounge <span class="latin" style="font-style:italic">|</span> Lofi Dharma</b><small>福慧下載 · MEMBER VAULT</small></span>
+    </a>
+    <nav class="navlinks" aria-label="快速篩選">
+      <a href="#covers" data-nav="全部" class="on">全部封面</a>
+      <a href="#covers" data-nav="觀音">觀音法門</a>
+      <a href="#covers" data-nav="如意寶輪王">如意寶輪王</a>
+      <a href="#covers" data-nav="中秋">中秋</a>
+      <a href="#how">下載說明</a>
+    </nav>
+    <span class="spacer"></span>
+    <label class="searchbox"><svg class="i"><use href="#i-search"/></svg><input id="q1" type="search" placeholder="搜尋咒語、封面…" autocomplete="off"></label>
+    <button class="btn-dark g" data-login><svg class="i"><use href="#i-crown"/></svg><span class="lbl">會員登入</span></button>
+    <button class="btn-line m" id="logout" title="登出後需要重新輸入密碼"><svg class="i" style="color:var(--ok)"><use href="#i-unlock"/></svg><span class="lbl">已解鎖 · 登出</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="mist" aria-hidden="true"><i></i><i></i></div>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>YOUTUBE MEMBERS ONLY · 會員專屬原圖 <span class="tag-gold"><svg class="i" style="width:11px;height:11px"><use href="#i-spark"/></svg><span id="nCovers">24</span> COVERS</span></span>
+        <h1>雲間法音<span class="mark">．</span><br>福慧下載</h1>
+        <p class="lead">Mantra Lounge 會員專屬｜原創佛系 Lofi 封面高清原圖</p>
+        <p class="lead-sm g">每個人都可以瀏覽縮圖。輸入會員密碼後，即可下載完整解析度原檔（最高 2560 × 1440）。</p>
+        <p class="lead-sm m">你已解鎖會員原圖。點任一張封面的「下載原圖」，或一次下載全部 ZIP。</p>
+        <div class="hero-actions">
+          <label class="searchbox"><svg class="i"><use href="#i-search"/></svg><input id="q2" type="search" placeholder="搜尋：大悲咒、綠度母、中秋…" autocomplete="off"></label>
+          <button class="btn-dark g" data-login><svg class="i"><use href="#i-lock"/></svg>輸入密碼解鎖下載</button>
+          <button class="btn-dark m" data-zip><svg class="i"><use href="#i-zip"/></svg>下載全部 ZIP</button>
+        </div>
+        <div class="moons">
+          <span class="c" aria-hidden="true"><i>☾</i><i>☾</i><i>☾</i></span>
+          <span>16:9 封面 · 9:16 手機桌布 · 4:5 社群貼文</span>
+          <a href="https://www.youtube.com/@MantraLoungeLoFi/join" target="_blank" rel="noopener" class="g">還不是會員？加入頻道會員 →</a>
+        </div>
+      </div>
+      <article class="feature" id="feature"></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="covers" style="scroll-margin-top:84px">
+    <div class="filters" id="chips" role="toolbar" aria-label="依咒語篩選"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap" id="how" style="scroll-margin-top:84px">
+    <div class="info">
+      <div>
+        <div class="kick"><svg class="i" style="width:13px;height:13px"><use href="#i-spark"/></svg>MEMBER VAULT · 會員下載說明</div>
+        <h2>縮圖人人可看，原圖輸入密碼即可下載</h2>
+        <div class="tiles">
+          <div class="tile"><span class="ic"><svg class="i"><use href="#i-img"/></svg></span><h4>高清原圖</h4><p>保留原始檔案與解析度，最高 2560 × 1440。適合 YouTube 封面、1 Hour Lofi 影片背景與印刷。</p></div>
+          <div class="tile"><span class="ic"><svg class="i"><use href="#i-frames"/></svg></span><h4>橫式・直式・社群</h4><p>16:9 影片封面、9:16 手機桌布與 Shorts、4:5 社群貼文，一次備齊。</p></div>
+          <div class="tile"><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><h4>密碼加密保存</h4><p>原圖以會員密碼加密存放。沒有密碼的訪客只看得到縮圖，拿不到原始檔案。</p></div>
+        </div>
+      </div>
+      <aside class="side">
+        <h4><svg class="i"><use href="#i-crown"/></svg>會員驗證方式</h4>
+        <p>會員密碼公布在 YouTube 頻道的會員專屬貼文。輸入一次後，這個瀏覽器會記住你，直到你按「登出」。</p>
+        <hr>
+        <p>所有圖片僅供個人修持與頻道使用，請勿轉售。願以此功德，迴向一切眾生。</p>
+        <button class="btn-dark g" data-login><svg class="i"><use href="#i-lock"/></svg>輸入會員密碼</button>
+        <button class="btn-dark m" data-zip><svg class="i"><use href="#i-zip"/></svg>下載全部 ZIP</button>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fb">Mantra Lounge <span class="latin" style="font-style:italic">|</span> Lofi Dharma</div>
+      <p>願以此功德，迴向一切眾生。願你在 Lofi 梵音中得安寧。</p>
+      <div class="links"><a href="https://www.youtube.com/@MantraLoungeLoFi" target="_blank" rel="noopener">YouTube</a><a href="https://www.youtube.com/@MantraLoungeLoFi/join" target="_blank" rel="noopener">加入會員</a></div>
+    </div>
+    <div class="fine">© 2026 Mantra Lounge<br>會員原圖僅供個人修持與頻道使用<br>米白 #F8F5F0 · 靛灰 #2C3E50 · 霧藍 #8FA8C8 · 金箔 #C9A86A</div>
+  </div>
+</footer>
+
+<dialog class="login" id="login" aria-labelledby="loginTitle">
+  <form id="loginForm" novalidate>
+    <div class="top"><span class="seal">雲</span><button type="button" class="x" id="loginClose" aria-label="關閉"><svg class="i"><use href="#i-x"/></svg></button></div>
+    <div>
+      <h2 id="loginTitle">會員登入</h2>
+      <p class="hint">輸入 YouTube 會員密碼，解鎖全部原圖下載。</p>
+    </div>
+    <div class="field" id="pwField">
+      <input id="pw" type="password" placeholder="會員密碼" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="pwErr">
+      <button type="button" id="pwShow" aria-label="顯示密碼"><svg class="i"><use href="#i-show"/></svg></button>
+    </div>
+    <p class="err" id="pwErr" role="alert"></p>
+    <label class="remember"><input type="checkbox" id="remember" checked>在這台裝置記住我</label>
+    <button class="btn-dark" type="submit" id="pwGo"><svg class="i"><use href="#i-unlock"/></svg>解鎖下載</button>
+    <p class="join">還不是會員？<a href="https://www.youtube.com/@MantraLoungeLoFi/join" target="_blank" rel="noopener">加入 Mantra Lounge 頻道會員 →</a></p>
+  </form>
+</dialog>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="封面預覽">
+  <button class="ctl close" id="lbClose" aria-label="關閉預覽"><svg class="i" style="width:20px;height:20px"><use href="#i-x"/></svg></button>
+  <button class="ctl prev" id="lbPrev" aria-label="上一張"><svg class="i" style="width:20px;height:20px"><use href="#i-l"/></svg></button>
+  <button class="ctl next" id="lbNext" aria-label="下一張"><svg class="i" style="width:20px;height:20px"><use href="#i-r"/></svg></button>
+  <div class="stage"><div class="frame">
+    <img id="lbImg" alt="">
+    <div class="veil g"><span id="lbVeil">預覽縮圖 · 原圖僅限會員下載</span><button data-login><svg class="i" style="width:13px;height:13px"><use href="#i-lock"/></svg>輸入密碼</button></div>
+  </div></div>
+  <div class="cap">
+    <b id="lbTitle"></b>
+    <small id="lbMeta"></small>
+    <button class="lbdl m" id="lbDl"><svg class="i"><use href="#i-dl"/></svg>下載原圖</button>
+    <span class="save-hint m" id="lbHint" hidden>如果下載沒有開始：在圖片上按右鍵「另存圖片」，手機請長按圖片儲存。</span>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+"use strict";
+const DATA = {"cfg": {"salt": "GYwsnHNgkLFPyToC2iPsYQ==", "iter": 250000, "verifier": "nVbao+S8ZwxkbvUiEaIEqS1q1iqd89N2JhdnP+KhHFgll2t8I1pWOY8WNcc5wsZ+pPI="}, "items": [{"id": "g851", "title": "準提神咒 49遍", "sub": "增長福慧，所願成就", "en": "CUNDI MANTRA · 1 HOUR LOFI", "cats": ["準提神咒"], "tags": ["準提", "福慧", "1小時Lofi"], "w": 2048, "h": 1152, "ratio": "16:9", "ext": "webp", "mime": "image/webp", "bytes": 685276, "file": "MantraLounge_準提神咒_49遍_1HourLofi.webp", "tw": 720, "th": 405}, {"id": "b16", "title": "地藏王菩薩 滅定業真言", "sub": "消滅宿世罪業，增長福德智慧", "en": "KSITIGARBHA · MOON LAKE GUARDIAN", "cats": ["地藏王"], "tags": ["地藏", "滅定業", "寫實"], "w": 1376, "h": 768, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 453249, "file": "MantraLounge_地藏王菩薩_滅定業真言.png", "tw": 720, "th": 402}, {"id": "b17", "title": "釋迦牟尼佛心咒", "sub": "金身說法，曼陀羅光環", "en": "SHAKYAMUNI · GOLD ROBE MANDALA", "cats": ["釋迦牟尼"], "tags": ["釋迦", "曼陀羅", "寫實"], "w": 1376, "h": 768, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 366489, "file": "MantraLounge_釋迦牟尼佛心咒_金身.png", "tw": 720, "th": 402}, {"id": "b18", "title": "釋迦牟尼佛心咒 · Q版", "sub": "寶寶佛與小白獅", "en": "SHAKYAMUNI · CHIBI BLESSING", "cats": ["釋迦牟尼"], "tags": ["釋迦", "Q版", "白獅"], "w": 1679, "h": 937, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 542861, "file": "MantraLounge_釋迦牟尼佛心咒_Q版.png", "tw": 720, "th": 402}, {"id": "b19", "title": "六字大明咒", "sub": "釋放焦慮，找回內在平靜", "en": "OM MANI PADME HUM · THOUSAND HANDS HALO", "cats": ["觀音", "六字大明咒"], "tags": ["觀音", "六字", "慈悲"], "w": 1678, "h": 937, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 494908, "file": "MantraLounge_六字大明咒_千手光環.png", "tw": 720, "th": 402}, {"id": "b21", "title": "十小咒 · 全方位守護", "sub": "圓滿善願、消業障、招引吉祥平安", "en": "TEN SMALL MANTRAS · TEMPLE LAKE", "cats": ["觀音", "十小咒"], "tags": ["十小咒", "守護", "蓮湖"], "w": 1678, "h": 937, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 611027, "file": "MantraLounge_十小咒_全方位守護_蓮湖.png", "tw": 720, "th": 402}, {"id": "b22", "title": "十小咒 · 咖啡館版", "sub": "圓滿善願、消業障、招引吉祥平安", "en": "TEN SMALL MANTRAS · LOFI CAFÉ", "cats": ["觀音", "十小咒"], "tags": ["十小咒", "咖啡館", "Lofi"], "w": 1678, "h": 937, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 470491, "file": "MantraLounge_十小咒_全方位守護_咖啡館.png", "tw": 720, "th": 402}, {"id": "b23", "title": "招財", "sub": "金身寶寶佛 · 元寶與小鹿", "en": "WEALTH MANTRA · GOLDEN INGOT", "cats": ["招財"], "tags": ["招財", "元寶", "財富"], "w": 2560, "h": 1440, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 704972, "file": "MantraLounge_招財_金身元寶.png", "tw": 720, "th": 405}, {"id": "b24", "title": "滿願", "sub": "綠度母 · 午後茶香", "en": "WISH FULFILLING · GREEN TARA TEA TIME", "cats": ["滿願", "綠度母"], "tags": ["滿願", "綠度母", "午茶"], "w": 2096, "h": 1184, "ratio": "16:9", "ext": "jpg", "mime": "image/jpeg", "bytes": 356683, "file": "MantraLounge_滿願_綠度母午茶.jpg", "tw": 720, "th": 407}, {"id": "b25", "title": "大白傘蓋佛母心咒", "sub": "避邪守護、淨化心靈磁場", "en": "WHITE PARASOL · PURPLE NIGHT MANDALA", "cats": ["大白傘蓋"], "tags": ["大白傘蓋", "守護", "淨化"], "w": 2096, "h": 1184, "ratio": "16:9", "ext": "jpg", "mime": "image/jpeg", "bytes": 470382, "file": "MantraLounge_大白傘蓋佛母心咒.jpg", "tw": 720, "th": 407}, {"id": "b26", "title": "大悲咒 · 夜晚客廳", "sub": "滿足諸願，免除災難，得無量福", "en": "GREAT COMPASSION · COZY NIGHT", "cats": ["觀音", "大悲咒"], "tags": ["大悲咒", "觀音", "夜晚"], "w": 2112, "h": 1168, "ratio": "16:9", "ext": "jpg", "mime": "image/jpeg", "bytes": 382051, "file": "MantraLounge_大悲咒_夜晚客廳.jpg", "tw": 720, "th": 398}, {"id": "b31", "title": "綠度母心咒 · 城市雨夜", "sub": "霓虹窗邊，貓咪與蓮花", "en": "GREEN TARA · RAINY CITY NIGHT", "cats": ["綠度母"], "tags": ["綠度母", "雨夜", "貓咪"], "w": 2096, "h": 1184, "ratio": "16:9", "ext": "jpg", "mime": "image/jpeg", "bytes": 482923, "file": "MantraLounge_綠度母心咒_城市雨夜.jpg", "tw": 720, "th": 407}, {"id": "bm1", "title": "中秋招財", "sub": "金身佛與玉兔、小鹿、月餅", "en": "MID-AUTUMN WEALTH · BUNNIES & DEER", "cats": ["中秋", "招財"], "tags": ["中秋", "招財", "玉兔"], "w": 2560, "h": 1440, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 736183, "file": "MantraLounge_中秋招財.png", "tw": 720, "th": 405}, {"id": "bm2", "title": "中秋團圓", "sub": "三尊寶寶佛，月下品茗分月餅", "en": "MID-AUTUMN · THREE BUDDHAS & MOONCAKES", "cats": ["中秋"], "tags": ["中秋", "團圓", "月餅"], "w": 2560, "h": 1440, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 877140, "file": "MantraLounge_中秋團圓_三尊寶寶佛.png", "tw": 720, "th": 405}, {"id": "b01", "title": "心經 · 南無阿彌陀佛", "sub": "Lofi 夜晚，戴耳機的觀音與貓咪", "en": "HEART SUTRA LOFI · HEADPHONES & CAT", "cats": ["觀音", "心經"], "tags": ["心經", "阿彌陀佛", "Lofi"], "w": 1287, "h": 832, "ratio": "3:2", "ext": "png", "mime": "image/png", "bytes": 403495, "file": "MantraLounge_心經_南無阿彌陀佛_Lofi夜晚.png", "tw": 720, "th": 465}, {"id": "b01v", "title": "心經 · 南無阿彌陀佛 · 直式", "sub": "念佛一聲 罪滅河沙，願生極樂 花開見佛", "en": "HEART SUTRA · AMITABHA · VERTICAL", "cats": ["心經", "直式"], "tags": ["心經", "阿彌陀佛", "直式"], "w": 768, "h": 1376, "ratio": "9:16", "ext": "png", "mime": "image/png", "bytes": 271393, "file": "MantraLounge_心經_南無阿彌陀佛_直式.png", "tw": 402, "th": 720}, {"id": "b02", "title": "綠度母心咒 · 書房晨光", "sub": "收音機、小鳥與一杯熱茶", "en": "GREEN TARA · ZEN STUDY MORNING", "cats": ["綠度母"], "tags": ["綠度母", "晨光", "書房"], "w": 1264, "h": 848, "ratio": "3:2", "ext": "png", "mime": "image/png", "bytes": 293717, "file": "MantraLounge_綠度母心咒_書房晨光.png", "tw": 720, "th": 483}, {"id": "b02v", "title": "綠度母心咒 · 直式", "sub": "書房晨光，社群貼文尺寸", "en": "GREEN TARA · MORNING · VERTICAL", "cats": ["綠度母", "直式"], "tags": ["綠度母", "晨光", "直式"], "w": 928, "h": 1152, "ratio": "4:5", "ext": "png", "mime": "image/png", "bytes": 323116, "file": "MantraLounge_綠度母心咒_書房晨光_直式.png", "tw": 580, "th": 720}, {"id": "b03", "title": "大悲咒 · 月夜蓮湖", "sub": "一念清淨，蓮花處處開", "en": "GREAT COMPASSION · MOONLIT LOTUS LAKE", "cats": ["觀音", "大悲咒"], "tags": ["大悲咒", "月夜", "蓮湖"], "w": 1376, "h": 768, "ratio": "16:9", "ext": "png", "mime": "image/png", "bytes": 334472, "file": "MantraLounge_大悲咒_月夜蓮湖.png", "tw": 720, "th": 402}, {"id": "b03v", "title": "大悲咒 · 月夜蓮湖 · 直式", "sub": "一念清淨，蓮花處處開", "en": "GREAT COMPASSION · MOONLIT · VERTICAL", "cats": ["觀音", "大悲咒", "直式"], "tags": ["大悲咒", "月夜", "直式"], "w": 928, "h": 1152, "ratio": "4:5", "ext": "png", "mime": "image/png", "bytes": 349334, "file": "MantraLounge_大悲咒_月夜蓮湖_直式.png", "tw": 580, "th": 720}, {"id": "g803", "title": "如意寶輪王陀羅尼", "sub": "消災除障，所求如意與滿願", "en": "CINTAMANI CAKRA · GOLDEN PARASOL", "cats": ["如意寶輪王"], "tags": ["如意", "滿願", "金傘"], "w": 2048, "h": 1152, "ratio": "16:9", "ext": "webp", "mime": "image/webp", "bytes": 842878, "file": "MantraLounge_如意寶輪王陀羅尼_金傘.webp", "tw": 720, "th": 405}, {"id": "g553", "title": "如意寶輪王陀羅尼 · 雲夜版", "sub": "消災除障，所求如意與滿願", "en": "CINTAMANI CAKRA · CLOUD NIGHT", "cats": ["如意寶輪王"], "tags": ["如意", "雲夜", "守護"], "w": 2048, "h": 1152, "ratio": "16:9", "ext": "webp", "mime": "image/webp", "bytes": 788272, "file": "MantraLounge_如意寶輪王陀羅尼_雲夜版.webp", "tw": 720, "th": 405}, {"id": "g359", "title": "如意寶輪王陀羅尼 · 櫻花寺", "sub": "消災除障，所求如意與滿願", "en": "CINTAMANI CAKRA · CHERRY BLOSSOM TEMPLE", "cats": ["如意寶輪王"], "tags": ["如意", "櫻花", "寺院"], "w": 2048, "h": 1152, "ratio": "16:9", "ext": "webp", "mime": "image/webp", "bytes": 651306, "file": "MantraLounge_如意寶輪王陀羅尼_櫻花寺.webp", "tw": 720, "th": 405}, {"id": "g906", "title": "如意寶輪王陀羅尼 · 直式", "sub": "手機桌布 9:16", "en": "CINTAMANI CAKRA · 9:16 VERTICAL", "cats": ["如意寶輪王", "直式"], "tags": ["如意", "手機桌布", "直式"], "w": 1152, "h": 2048, "ratio": "9:16", "ext": "webp", "mime": "image/webp", "bytes": 783476, "file": "MantraLounge_如意寶輪王陀羅尼_直式.webp", "tw": 405, "th": 720}], "chips": ["全部", "觀音", "大悲咒", "十小咒", "心經", "六字大明咒", "綠度母", "如意寶輪王", "準提神咒", "釋迦牟尼", "地藏王", "大白傘蓋", "招財", "滿願", "中秋", "直式"]};
+const ITEMS = DATA.items, CFG = DATA.cfg, CHIPS = DATA.chips;
+const byId = Object.fromEntries(ITEMS.map(x => [x.id, x]));
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const root = document.documentElement;
+const KEY_STORE = "mlv.key.v1";
+const enc = new TextEncoder();
+
+/* ---------- helpers ---------- */
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const kb = n => n >= 1048576 ? (n/1048576).toFixed(1) + " MB" : Math.round(n/1024) + " KB";
+const b64ToBytes = s => { const bin = atob(s); const u = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i); return u; };
+const bytesToB64 = u => { let s = ""; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); };
+const icon = (id, st) => `<svg class="i"${st ? ` style="${st}"` : ""}><use href="#${id}"/></svg>`;
+let toastT;
+function toast(msg, ms){ const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toastT); if (ms !== 0) toastT = setTimeout(() => t.classList.remove("on"), ms || 3200); }
+function lsGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function lsSet(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
+function lsDel(k){ try { localStorage.removeItem(k); } catch(e){} }
+
+/* ---------- download channel: Claude artifact capability, else a normal browser download ---------- */
+const inClaude = !!(window.claude && typeof window.claude.use === "function");
+const downloadsP = inClaude
+  ? Promise.race([window.claude.use("downloads").catch(() => null), new Promise(r => setTimeout(() => r(null), 4000))])
+  : Promise.resolve(null);
+
+async function saveBlob(blob, filename, id){
+  const dl = await downloadsP;
+  if (dl){
+    try { await dl.save({ filename, data: blob }); toast("已下載 " + filename); return true; }
+    catch(e){
+      const c = e && e.code;
+      if (c === "declined") { toast("已取消下載"); return false; }
+      if (c === "rate_limited") { toast("上一個下載視窗還開著，請先完成再試"); return false; }
+      if (c === "extension_not_enabled" || c === "rejected_extension") { toast("這裡無法下載這種檔案格式，請改為逐張下載"); return false; }
+      /* otherwise fall through to a normal download */
+    }
+  }
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+  if (inClaude && id) openLB(ITEMS.findIndex(x => x.id === id), true);
+  else toast("已下載 " + filename);
+  return true;
+}
+
+/* ---------- crypto: originals are AES-GCM encrypted; the key comes from the member password ---------- */
+let KEY = null;
+const normPw = s => s.replace(/\s+/g, "").toLowerCase();
+async function deriveKey(pw){
+  const base = await crypto.subtle.importKey("raw", enc.encode(normPw(pw)), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({ name:"PBKDF2", salt:b64ToBytes(CFG.salt), iterations:CFG.iter, hash:"SHA-256" }, base, { name:"AES-GCM", length:256 }, true, ["decrypt"]);
+}
+async function verify(key){
+  const v = b64ToBytes(CFG.verifier);
+  try {
+    const out = await crypto.subtle.decrypt({ name:"AES-GCM", iv:v.slice(0,12), additionalData:enc.encode("verify") }, key, v.slice(12));
+    return new TextDecoder().decode(out) === "MANTRA-LOUNGE-VAULT-OK";
+  } catch(e){ return false; }
+}
+const vaultWaiters = {};
+window.__mlv = (id, b64) => { const w = vaultWaiters[id]; if (w) { delete vaultWaiters[id]; w(b64); } };
+async function loadVault(id){
+  try {
+    const r = await fetch("vault/" + id + ".js", { cache:"force-cache" });
+    if (!r.ok) throw new Error("http " + r.status);
+    const t = await r.text(); const m = t.match(/"([A-Za-z0-9+/=]{64,})"/);
+    if (!m) throw new Error("bad file");
+    return m[1];
+  } catch(e){
+    return new Promise((res, rej) => {
+      vaultWaiters[id] = res;
+      const s = document.createElement("script"); s.src = "vault/" + id + ".js"; s.async = true;
+      s.onerror = () => { delete vaultWaiters[id]; rej(new Error("load")); };
+      document.head.appendChild(s); setTimeout(() => s.remove(), 30000);
+    });
+  }
+}
+const blobCache = {};
+async function getOriginal(id){
+  if (blobCache[id]) return blobCache[id];
+  const it = byId[id];
+  const u = b64ToBytes(await loadVault(id));
+  const plain = await crypto.subtle.decrypt({ name:"AES-GCM", iv:u.slice(0,12), additionalData:enc.encode(id) }, KEY, u.slice(12));
+  const blob = new Blob([plain], { type: it.mime });
+  blobCache[id] = { blob, url: URL.createObjectURL(blob) };
+  return blobCache[id];
+}
+
+function setMember(on){
+  root.classList.toggle("member", on);
+  $$(".btn-dl").forEach(b => b.innerHTML = on ? icon("i-dl") + "下載原圖" : "下載原圖" + icon("i-lock", "width:13px;height:13px"));
+  $$(".pill.bl").forEach(p => p.innerHTML = '<span class="d"></span>' + (on ? "原圖已解鎖" : "預覽縮圖"));
+}
+async function tryRemembered(){
+  const raw = lsGet(KEY_STORE); if (!raw || !window.crypto || !crypto.subtle) return;
+  try {
+    const k = await crypto.subtle.importKey("raw", b64ToBytes(raw), { name:"AES-GCM" }, true, ["decrypt"]);
+    if (await verify(k)) { KEY = k; setMember(true); } else lsDel(KEY_STORE);
+  } catch(e){ lsDel(KEY_STORE); }
+}
+
+/* ---------- rendering ---------- */
+let cat = "全部", q = "";
+const catCount = c => c === "全部" ? ITEMS.length : ITEMS.filter(x => x.cats.includes(c)).length;
+function renderChips(){
+  $("#chips").innerHTML = CHIPS.map(c => `<button class="chip" aria-pressed="${c === cat}" data-cat="${esc(c)}">${esc(c)}<span class="n">${catCount(c)}</span></button>`).join("") + `<span class="count" id="count"></span>`;
+}
+function thumbHTML(it, cls){
+  const tall = it.h > it.w;
+  const src = "thumbs/" + it.id + ".webp";
+  return (tall ? `<img class="bg" src="${src}" alt="" aria-hidden="true" loading="lazy">` : "") +
+    `<img class="fg" src="${src}" alt="${esc(it.title)} 縮圖" width="${it.tw}" height="${it.th}" loading="${cls === "eager" ? "eager" : "lazy"}" decoding="async">`;
+}
+function cardHTML(it){
+  const tall = it.h > it.w;
+  return `<article class="card" data-id="${it.id}">
+    <button class="thumb${tall ? " tall" : ""}" data-open="${it.id}" aria-label="預覽 ${esc(it.title)}">
+      ${thumbHTML(it)}
+      <span class="pill tl">${icon("i-spark","width:11px;height:11px")}${esc(it.cats[0])}</span>
+      <span class="pill tr">${esc(it.ratio)}</span>
+      <span class="pill bl"><span class="d"></span>預覽縮圖</span>
+    </button>
+    <div class="cbody">
+      <h3>${esc(it.title)}</h3>
+      <p class="sub">${esc(it.sub)}</p>
+      <p class="en">${esc(it.en)}</p>
+      <div class="tags">${it.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>
+      <div class="acts">
+        <button class="btn-dl" data-dl="${it.id}">下載原圖${icon("i-lock","width:13px;height:13px")}</button>
+        <button class="btn-pv" data-open="${it.id}">${icon("i-eye")}放大預覽</button>
+      </div>
+      <p class="meta">${icon("i-img")}原圖 ${it.w} × ${it.h} · ${it.ext.toUpperCase()} · ${kb(it.bytes)}</p>
+    </div>
+  </article>`;
+}
+let visible = ITEMS.slice();
+function renderGrid(){
+  const qq = q.trim().toLowerCase();
+  visible = ITEMS.filter(it => (cat === "全部" || it.cats.includes(cat)) &&
+    (!qq || [it.title, it.sub, it.en, it.cats.join(" "), it.tags.join(" ")].join(" ").toLowerCase().includes(qq)));
+  $("#grid").innerHTML = visible.length ? visible.map(cardHTML).join("") :
+    `<div class="empty">找不到符合「${esc(q)}」的封面。試試「大悲咒」、「綠度母」或「中秋」。</div>`;
+  $("#count").textContent = `· 顯示 ${visible.length} / ${ITEMS.length} 張`;
+  $$("#chips .chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  $$(".navlinks a[data-nav]").forEach(a => a.classList.toggle("on", a.dataset.nav === cat));
+  setMember(root.classList.contains("member"));
+}
+function renderFeature(){
+  const it = ITEMS[0];
+  $("#feature").innerHTML = `
+    <button class="ph" data-open="${it.id}" aria-label="預覽 ${esc(it.title)}">
+      ${thumbHTML(it, "eager")}
+      <span class="pill tl">${icon("i-spark","width:11px;height:11px")}最新上架</span>
+      <span class="pill tr gold">1 HOUR LOFI</span>
+      <span class="pill bl"><span class="d"></span>預覽縮圖</span>
+    </button>
+    <div class="fbody">
+      <h2>${esc(it.title)}｜${esc(it.sub.replace("，"," "))}</h2>
+      <p class="en">${esc(it.en)} · ${it.w} × ${it.h} · ${it.ext.toUpperCase()}</p>
+      <div class="row">
+        <button class="btn-dl" data-dl="${it.id}">下載原圖</button>
+        <button class="btn-pv g" data-login>${icon("i-lock")}全部下載</button>
+        <button class="btn-pv m" data-zip>${icon("i-zip")}全部下載 ZIP</button>
+      </div>
+    </div>`;
+}
+
+/* ---------- login ---------- */
+const dlg = $("#login");
+let pendingDl = null;
+function openLogin(afterId){
+  pendingDl = afterId || null;
+  $("#pwErr").textContent = ""; $("#pwField").classList.remove("bad");
+  if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+  setTimeout(() => $("#pw").focus(), 30);
+}
+function closeLogin(){ if (dlg.open) dlg.close(); }
+$("#loginClose").addEventListener("click", closeLogin);
+dlg.addEventListener("click", e => { if (e.target === dlg) closeLogin(); });
+$("#pwShow").addEventListener("click", () => { const p = $("#pw"); p.type = p.type === "password" ? "text" : "password"; });
+$("#loginForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const pw = $("#pw").value, go = $("#pwGo"), err = $("#pwErr"), field = $("#pwField");
+  field.classList.remove("bad"); err.textContent = "";
+  if (!pw.trim()) { err.textContent = "請輸入會員密碼。"; field.classList.add("bad"); return; }
+  if (!window.crypto || !crypto.subtle) { err.textContent = "這個瀏覽器不支援安全解鎖，請改用最新版 Chrome、Safari 或 Edge。"; return; }
+  go.disabled = true; go.innerHTML = '<span class="spin"></span>驗證中…';
+  try {
+    const k = await deriveKey(pw);
+    if (await verify(k)) {
+      KEY = k;
+      if ($("#remember").checked) lsSet(KEY_STORE, bytesToB64(new Uint8Array(await crypto.subtle.exportKey("raw", k))));
+      setMember(true); closeLogin(); $("#pw").value = "";
+      toast("已解鎖，現在可以下載全部原圖");
+      if (pendingDl) { const id = pendingDl; pendingDl = null; downloadOne(id); }
+    } else {
+      void field.offsetWidth; field.classList.add("bad");
+      err.textContent = "密碼不正確。請到 YouTube 會員專屬貼文確認密碼後再試一次。";
+    }
+  } catch(ex){ err.textContent = "解鎖時發生錯誤，請重新整理頁面再試一次。"; }
+  go.disabled = false; go.innerHTML = icon("i-unlock") + "解鎖下載";
+});
+$("#logout").addEventListener("click", () => {
+  KEY = null; lsDel(KEY_STORE);
+  Object.values(blobCache).forEach(c => URL.revokeObjectURL(c.url)); for (const k in blobCache) delete blobCache[k];
+  setMember(false); toast("已登出，原圖重新上鎖");
+});
+
+/* ---------- downloads ---------- */
+async function downloadOne(id){
+  if (!KEY) return openLogin(id);
+  const it = byId[id];
+  const btns = $$(`.btn-dl[data-dl="${id}"]`);
+  btns.forEach(b => { b.setAttribute("aria-busy", "true"); b.innerHTML = '<span class="spin"></span>解密中…'; });
+  try { const o = await getOriginal(id); await saveBlob(o.blob, it.file, id); }
+  catch(e){ toast("下載失敗：請確認網路連線後再試一次"); }
+  btns.forEach(b => { b.removeAttribute("aria-busy"); b.innerHTML = icon("i-dl") + "下載原圖"; });
+}
+let zipping = false;
+async function downloadZip(){
+  if (!KEY) return openLogin();
+  if (zipping) return;
+  if (typeof JSZip === "undefined") { toast("ZIP 工具沒有載入，請改為逐張下載"); return; }
+  zipping = true;
+  try {
+    const zip = new JSZip();
+    for (let i = 0; i < ITEMS.length; i++) {
+      toast(`正在準備 ZIP… ${i + 1} / ${ITEMS.length}`, 0);
+      const it = ITEMS[i]; const o = await getOriginal(it.id);
+      zip.file(it.file, o.blob, { binary: true });
+    }
+    toast("正在打包 ZIP…", 0);
+    const blob = await zip.generateAsync({ type:"blob", compression:"STORE" });
+    $("#toast").classList.remove("on");
+    await saveBlob(blob, "MantraLounge_會員原圖_" + ITEMS.length + "張.zip");
+  } catch(e){ toast("打包失敗：請確認網路連線後再試一次，或改為逐張下載"); }
+  zipping = false;
+}
+
+/* ---------- lightbox ---------- */
+let lbIdx = -1, lbList = ITEMS;
+async function openLB(idx, showHint){
+  lbList = visible.length ? visible : ITEMS;
+  if (idx < 0) return;
+  const it = ITEMS[idx]; lbIdx = lbList.indexOf(it); if (lbIdx < 0) { lbList = ITEMS; lbIdx = idx; }
+  const lb = $("#lb"), img = $("#lbImg");
+  img.src = "thumbs/" + it.id + ".webp"; img.alt = it.title;
+  $("#lbTitle").textContent = it.title;
+  $("#lbMeta").textContent = `${it.ratio} · 原圖 ${it.w} × ${it.h} · ${it.ext.toUpperCase()} · ${kb(it.bytes)}`;
+  $("#lbVeil").textContent = `預覽縮圖 · ${it.w} × ${it.h} 原圖僅限會員`;
+  $("#lbHint").hidden = !showHint;
+  lb.hidden = false; document.body.style.overflow = "hidden";
+  if (KEY) { try { const o = await getOriginal(it.id); if (lbList[lbIdx] === it) img.src = o.url; } catch(e){} }
+}
+function closeLB(){ $("#lb").hidden = true; document.body.style.overflow = ""; }
+function stepLB(d){ if (lbIdx < 0) return; const n = (lbIdx + d + lbList.length) % lbList.length; openLB(ITEMS.indexOf(lbList[n])); }
+$("#lbClose").addEventListener("click", closeLB);
+$("#lbPrev").addEventListener("click", () => stepLB(-1));
+$("#lbNext").addEventListener("click", () => stepLB(1));
+$("#lb").addEventListener("click", e => { if (e.target.id === "lb" || e.target.classList.contains("stage")) closeLB(); });
+$("#lbDl").addEventListener("click", () => { const it = lbList[lbIdx]; if (it) downloadOne(it.id); });
+document.addEventListener("keydown", e => {
+  if ($("#lb").hidden) return;
+  if (e.key === "Escape") closeLB(); else if (e.key === "ArrowLeft") stepLB(-1); else if (e.key === "ArrowRight") stepLB(1);
+});
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-open],[data-dl],[data-login],[data-zip],[data-cat],[data-nav]");
+  if (!t) return;
+  if (t.dataset.open) openLB(ITEMS.findIndex(x => x.id === t.dataset.open));
+  else if (t.dataset.dl) downloadOne(t.dataset.dl);
+  else if (t.hasAttribute("data-login")) { if (!$("#lb").hidden) closeLB(); openLogin(); }
+  else if (t.hasAttribute("data-zip")) downloadZip();
+  else if (t.dataset.cat) { cat = t.dataset.cat; renderGrid(); }
+  else if (t.dataset.nav) { cat = t.dataset.nav; renderGrid(); }
+});
+["#q1", "#q2"].forEach(sel => $(sel).addEventListener("input", e => {
+  q = e.target.value; $("#q1").value = q; $("#q2").value = q; renderGrid();
+}));
+$("#q2").addEventListener("keydown", e => { if (e.key === "Enter") $("#covers").scrollIntoView({ behavior:"smooth" }); });
+
+$("#nCovers").textContent = ITEMS.length;
+renderFeature(); renderChips(); renderGrid();
+tryRemembered();
+})();
+</script>
+
+</body>
+</html>
